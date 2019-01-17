@@ -27,7 +27,7 @@ VWC=['VWC_1_Avg', 'VWC_2_Avg', 'VWC_3_Avg', 'VWC_4_Avg', 'VWC_5_Avg', 'VWC_6_Avg
 T1=['T5cm_1_Avg', 'T10cm_1_Avg',  'T20cm_1_Avg',  'T30cm_1_Avg',  'T50cm_1_Avg', 'T100cm_1_Avg'  ]
 T2=['T5cm_2_Avg','T10cm_2_Avg','T20cm_2_Avg','T30cm_2_Avg','T50cm_2_Avg','T100cm_2_Avg']
 
-def plotIt(columns,append):
+def plotIt(file,columns,append):
     plotterVals=file.loc[file.index[2]:,columns].astype(float)
     plotterVals.index=pd.to_datetime(plotterVals.index)
     plotted=plotterVals.plot(use_index=True,title=(title+append),subplots=separatePlots,figsize=sizeparam)
@@ -43,30 +43,7 @@ while (i < len(files)):
     #file=file.reindex(sorted(file.columns), axis=1)#sort file i - useful for making new column lists: copy this and the above
 
     
-    #tell it what columns lists you want to plot and what you want them to be called
-    plotIt(theta1,'_theta1')
-    
-    
-    plotIt(theta2,'_theta2')
-    
-    
-    plotIt(T,'_T')
-    
-    
-    plotIt(T1,'_T1')
-    
-    
-    plotIt(T2,'_T2')
-    
-    
-    plotIt(EC,'_EC')
-    
-    
-    plotIt(TDR,'_TDR')
-    
-    
-    plotIt(VWC,'_VWC')
-    
+    #tell it what columns lists you want to plot and what you want them to be called, ex: plotIt(file,theta1,'_theta1')    
     
     i+=1
 
