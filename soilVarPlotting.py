@@ -1,39 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jan 17 14:58:41 2019
-
-@author: jbgab
-"""
-
-soilVarPlotting2.py
-
-Type
-Text
-Size
-3 KB (3,165 bytes)
-Storage used
-3 KB (3,165 bytes)
-Location
-HIE
-Owner
-me
-Modified
-Dec 3, 2018 by me
-Opened
-2:54 PM by me
-Created
-Dec 3, 2018 with Google Drive Web
-Script allowing line plotting of soil sensor data, creating the figures found in eucfacesoilsensorFigures
-Viewers can download
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec  2 15:49:21 2018
-
-@author: jbgab
-"""
-
-# -*- coding: utf-8 -*-
-"""
 Created on Wed Sep 12 07:59:20 2018
 
 @author: jbgab
