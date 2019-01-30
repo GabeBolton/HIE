@@ -53,16 +53,16 @@ To:
 ...etc.
 </code></pre>
 Making it consistent with the format of CUP_S00_TERNHECT_616_20150818_20151019_R.dat<br>
-There are two errors, one in the headers shown on the very first line: <code>"TOA5,""Plot 7 Soil Moisture </code><br>
-look at that again: "**TOA5,**_""_**Plot 7 Soil Moisture**
-That goes on for the rest of the header lines, so because the data layout is consistant I used the header from CUP_S00_TERNHECT_616_20150818_20151019_R.dat, however replace it after dealing with the next issue: the data<br>
+There are two errors, one in the headers shown on the very first line: <code>"TOA5,""Plot 7 Soil Moisture Campaign"",""CR1000"", etc </code><br>
+look at that again: "TOA5,~~""~~ Plot 7 Soil Moisture Campaign ~~""~~,~~""~~ CR1000 ~~""~~ etc <br>
+That goes on for the rest of the header lines, so because the data layout is consistant I used the header from CUP_S00_TERNHECT_616_20150818_20151019_R.dat, however replace it after dealing with the next issue: the data.<br>
 The data lines have a <code>"</code> at the start and end of the lines, instead of at the start and end of the timestamp. To fix this
 use notepad++, Visual Studio Code or any other text proccessor with regex find and replace<br>
-find: <code>"\n</code>
-replace: <code>\n</code>
-then
-find: <code>0:00,</code>
-replace: <code>0:00",</code>
+find: <code>"\n</code><br>
+replace: <code>\n</code><br>
+then<br>
+find: <code>0:00,</code><br>
+replace: <code>0:00",</code><br>
 </p>
 </details>
 <details>
