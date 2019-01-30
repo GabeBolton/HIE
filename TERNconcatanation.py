@@ -28,6 +28,22 @@ for file in files:
     #y = 0.0761x2 - 2.3773x + 23.195.
     thisfile.loc[:,'VWC(3)']=0.0761*(thisfile.loc[:,'PA_uS_Avg(3)']*thisfile.loc[:,'PA_uS_Avg(3)'])-2.3773*thisfile.loc[:,'PA_uS_Avg(3)']+23.195
     
+    #plot
+    plt.subplot(3,1,1)
+    plt.plot(thisfile.index,thisfile.loc[:,'PA_uS_Avg(1)'])
+    plt.title('PA_uS_Avg(1)')
+    plt.ylim(-1,40)
+    plt.grid(True)
+    plt.subplot(3,1,2)
+    plt.plot(thisfile.index,thisfile.loc[:,'PA_uS_Avg(2)'])
+    plt.title('PA_uS_Avg(2)')
+    plt.ylim(-1,40)
+    plt.grid(True)
+    plt.subplot(3,1,3)
+    plt.plot(thisfile.index,thisfile.loc[:,'PA_uS_Avg(3)'])
+    plt.title('PA_uS_Avg(3)')
+    plt.ylim(-1,40)
+    plt.grid(True)
     infiles.append(thisfile)
 concat=pd.concat(infiles[:], ignore_index=False,sort=False)
 
