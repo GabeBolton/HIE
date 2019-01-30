@@ -7,8 +7,9 @@ Created on Thu Jan 17 16:18:27 2019
 import glob
 import pandas as pd
 import numpy as np
-folderPath='ternsoildata\\'
+folderPath='ternsoildata\\'#path of data folder in relation to path of script, if data is in same folder as script just use ''
 files = glob.glob(folderPath+'CUP_S00_TERNHECT*R.dat')
+print("If you get the error: 'Unknown string format:', '2015-10-19... etc the unquote that should be at the end of the time string is at the end of the data row. Use the fixed files.")
 infiles=[]
 for file in files:
     thisfile=pd.read_csv(file,index_col=0,skiprows=[0,2,3])
