@@ -11,7 +11,7 @@ import pandas as pd
 save=False
 sizeparam=20,6 #change x,y size of plot
 separatePlots=1 #plot separatly or together
-
+#for use with files like FACE_R1_B1_SoilVars_20180831.dat
 filePath='eucfacesoilsensorfiles\\'
 outPath='eucfacesoilsensorFigures\\'
 files = glob.glob(filePath+'*SoilVars*.dat')#uses regex to access a list of files
